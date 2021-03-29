@@ -1,12 +1,17 @@
 import exp from "../../data/expected.json";
 import sel from "../../data/selectors";
 
+
 describe('My Little Hero', function () {
 
     describe('Getting to the page', function () {
 
         before('Open App', function () {
             browser.url('');
+        });
+
+        afterEach('Refresh', () => {
+            browser.url('')
         });
 
         xit('TC-028 Name field placeholder= "Hero\'s name"', function () {
@@ -139,7 +144,7 @@ describe('My Little Hero', function () {
         //      expect(error).toEqual(false);
         // });
 
-        it('TC-051 Name field is empty', function () {
+        xit('TC-051 Name field is empty', function () {
             const arrRadioHe =  $$(sel.radioButtonsLabel)[0];
             arrRadioHe.click();
             $(sel.age).setValue('1234567890');
@@ -169,5 +174,38 @@ describe('My Little Hero', function () {
        //      expect(error).toEqual(false);
        //  });
 
+        xit('TC-054 Button he is enabled',()=>{
+        const enabledHe =  $$(sel.radioButtons)[0];
+        enabledHe.click();
+        expect(enabledHe).toBeEnabled();
+        });
+
+        xit('TC-055 Button she is enabled',()=>{
+            const enabledShe = $$(sel.radioButtons)[1];
+            enabledShe.click();
+            expect(enabledShe).toBeEnabled();
+        });
+
+        xit('TC-056 Button It is enabled',()=>{
+            const enabledIt =  $$(sel.radioButtons)[2];
+            enabledIt.click();
+            expect(enabledIt).toBeEnabled();
+        });
+
+        // it('TC-057 User can choose only one button at the time',()=>{
+        //     const enabledHe =  $$(sel.radioButtons)[0];
+        //     const enabledShe = $$(sel.radioButtons)[1];
+        //     const enabledIt =  $$(sel.radioButtons)[2];
+        //     enabledHe.click();
+        //     expect(enabledHe).toBeEnabled();
+        //     const enabledSheIsDisabled = $$(sel.radioButtons)[1].getAttribute('disabled');
+        //     expect(enabledSheIsDisabled).toEqual('true');
+        //     const enabledItIsDisabled = $$(sel.radioButtons)[2].getAttribute('disabled');
+        //     expect(enabledItIsDisabled).toEqual('true');
+        // });
+
+
+        
     });
 });
+

@@ -17,12 +17,13 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/smoke/*.js',
+       // './test/smoke/*.js',
         './test/extended/*.js'
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
+        './test/smoke/*.js'
     ],
     //
     // ============
@@ -91,7 +92,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://qa-apps.netlify.app/hero',
+    baseUrl: 'https://qa-apps.netlify.app/hero/fix',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

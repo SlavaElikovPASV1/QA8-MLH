@@ -4,6 +4,9 @@ const elements = {
     "requiredLabel": ".ant-form-item-required",
     "name": "#name",
     "radioButtons": ".ant-radio",
+    "radioButtonHe":"$$('.ant-radio-input')",
+    "radioButtonShe":"$$('.ant-radio-input')[1]",
+    "radioButtonIt":"$$('.ant-radio-input')[2]",
     "radioButtonsLabel": ".ant-radio-wrapper",
     "age": "#age",
     "storyType": ".ant-select-selector",
@@ -14,7 +17,7 @@ const elements = {
     "tryAgain": ".btn-primary",
     "errorRequired":"[role='alert']",
     "longLength70":"div=70 symbols max",
-    "comedy":"div[title='Comedy'",
+    "comedy":"div[title='Comedy']",
     "story":"#story"
 
 }

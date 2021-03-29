@@ -47,12 +47,12 @@ xdescribe('Labels are Correct', function () {
    });
 
     /*
- ​
+
     it('TC-022 Age field label = "3. How old is your hero?"', function () {
         let label = $$(sel.requiredLabel)[2].getText();
         expect(label).toEqual(exp.ageLabel);
     });
- ​
+
     */
 
     it('TC-023 Type of story label = "4. What type of story would you like to read?"', function () {
